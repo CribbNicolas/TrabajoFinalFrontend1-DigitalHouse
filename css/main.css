@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    font-size: 16px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #242E52;
+    
+    --padding-normal-page: 15%;
+    --padding-extra: 5%;
+    --padding-endpage: 10%;
+}
+
+body, body * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 60px var(--padding-normal-page);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+}
+
+header nav i {
+    visibility: hidden;
+}
+
+header nav ul li {
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: padding 0.2s ease, text-shadow 0.3s ease;
+}
+
+header ul li:hover {
+    text-shadow: 0 8px 4px #1e1e2611;
+    padding-bottom: 6px;
+    
+}
+
+main {
+    padding: 50px var(--padding-normal-page);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+main > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+
+main > section > article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+section.welcome > article:nth-of-type(2) {
+    align-items: center;
+}
+
+section.welcome > article > div {
+    display: flex;
+    align-items: center;
+}
+
+section.welcome > article > h2 {
+    font-size: 3rem;
+}
+
+main > section > article > p {
+    font-size: 1rem;
+    color: black;
+    padding-right: 30%;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+section.welcome > article img {
+    flex-grow: 1;
+    height: 250px;
+}
+
+section.identity > article:nth-of-type(1) {
+    align-self: flex-start;
+}
+
+section.identity > article > h3 {
+    font-size: 2.2rem;
+}
+
+section.identity > article > ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+
+section.identity > article > ol > li {
+    position: relative; 
+}
+
+section.identity > article > ol > li::before {
+    content: "0" counter(item); 
+    counter-increment: item;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    border-radius: 50vh;
+    background-color: #F3603B;
+    left: -20px;
+    height: 40px;
+    width: 60px;
+    transform: translateX(-100%) translateY(25%);
+    
+    /* Para centrar y dar estilo al content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+section.identity > article > ol h4 {
+    font-size: 1rem;
+    padding: 15px 0;
+}
+
+section.identity > article > ol p {
+    color: #B3B2B7;
+    font-size: 1rem;
+    padding: 15px 0;
+}
+
+section.people{
+    padding: 80px 0 170px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+section.people h3{
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+
+section.people > div {
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--padding-extra);
+}
+
+section.people h6 {
+    font-size: 1.1rem;
+    color: #3F4868;
+}
+
+section.people article {
+    position: relative;
+    padding: 50px 30px 10px 30px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section.people article p {
+    word-spacing: normal;
+    letter-spacing: normal;
+    font-size: 1rem;
+    color: #B9B9C1;
+    text-align: center;
+}
+
+section.people article img {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+section.banner {
+    display: flex ;
+    justify-content: space-between;
+    padding: 70px var(--padding-endpage);
+    background-color: #F3613C;
+    align-items: center;
+}
+
+section.banner h2{
+    font-size: 1.9rem;
+    color: #FFFFFF;
+    width: 33%;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #1E1E26;
+    color: white;
+    padding: 50px var(--padding-endpage);
+}
+
+footer svg {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+footer div {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    align-self: flex-end;
+
+    display: flex;
+    gap: 15px;
+}
+
+footer div i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out;
+}
+
+footer div i:hover{
+    color: #F3613C;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    font-size: 1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out;
+}
+
+footer li:hover{
+    color: #F3613C;
+}
+
+footer ul:nth-of-type(1) {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
+footer ul:nth-of-type(2) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+}
+
+footer form {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    align-self: center;
+
+    display: flex;
+    gap: 15px;
+}
+
+footer form input{
+    border-style: none;
+    border-radius: 50vh;
+    padding: 13px 20px;
+}
+
+footer form input[type="email"]{
+    color: #A0A0A0;
+    flex-grow: 1;
+    transition: box-shadow 0.15s linear, outline 0.15s linear;
+}
+
+footer form input[type="email"]:focus{
+    outline: 1px solid #F3613C;
+    box-shadow: 0 0 5px 1px #F3613C;
+}
+
+footer form input[type="email"]:valid{
+    outline: 1px solid #3cf33c;
+    box-shadow: 0 0 5px 1px #3cf33c;
+}
+
+footer form input[type="submit"]{
+    color: #ffffff;
+    background-color: #F3613C;
+    cursor: pointer;
+}
+
+footer form input[type="submit"]:focus{
+    background-color: #c38272;
+}
+
+footer p {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    align-self: flex-end;
+    justify-self: end;
+
+    color: #8C8C94;
+    font-size: 0.7rem;
+}
+
+#title-logo {
+    fill: #FFFFFF;
+}
+
+button.getStarted {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    padding: 13px 25px;
+    border-radius: 50vh;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.2s linear, color 0.3s ease;
+    overflow: hidden;
+
+    color: #F3603B;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+button.getStarted:not(.reverse) {
+    color: #FFFFFF;
+    box-shadow: 0 4px 4px 0 rgba(242, 95, 58, 0.3);
+    transition: box-shadow 0.6s ease ;
+}
+
+button.getStarted:focus{
+    background-color: #da7960;
+}
+
+button.getStarted::before{
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50vh;
+    background-color: #FFFFFF;
+}
+
+button.getStarted:not(.reverse)::before {
+    background-color: #F3603B;
+}
+
+button.getStarted::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -150%;
+    left: 0;
+    width: 200%;
+    height: 500%;
+    border-radius: 20px;
+    background-color: #13133d;
+    transform-origin: center;
+    transform: translateX(-125%) rotateZ(30deg);
+    transition: transform 0.4s ease;
+}
+
+button.getStarted:not(.reverse)::after{
+    background-color: #13133d; 
+}
+
+button.getStarted:not(.reverse):hover::after{
+    transform: translateX(-25%) rotateZ(30deg);
+}
+
+button.getStarted:hover{
+    color: white;
+}
+
+button.getStarted:not(.reverse):hover {
+    box-shadow: 0 4px 4px 0 #13133d49;
+}
+
+button.getStarted:hover::after{
+    transform: translateX(-25%) rotateZ(30deg);
+}
+
+
+/************************************************************************/
+/*********************    RESPONSIVE SMARTPHONE    ***********************/
+/************************************************************************/
+
+@media(max-width: 700px) {
+    html {
+        font-size: 12px;
+        --padding-normal-page: 5%;
+        --padding-extra: 5%;
+        --padding-endpage: 5%;
+    }
+
+    main section.welcome{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    section.welcome > article {
+        text-align: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    section.welcome > article > button {
+        margin-top: 20px;
+    }
+
+    section.people > div > article:nth-of-type(odd){
+        display: none;
+    }
+
+}
+
+/************************************************************************/
+/********************    RESPONSIVE MIDDLE WITDH    *********************/
+/************************************************************************/
+
+@media(max-width: 1000px) {
+    html {
+        font-size: 14px;
+        --padding-normal-page: 10%;
+        --padding-extra: 0%;
+        --padding-endpage: 5%;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    header {
+        padding: 40px var(--padding-normal-page);
+    }
+
+    header button {
+        display: none;
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    header nav ul {
+        display: none;
+        position: absolute;
+        background-color: #13133d;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        transform: translateX(-75%)
+    }
+
+    header nav ul li{
+        font-size: 1rem;
+        background-color: #fafafa;
+        text-shadow: none !important;
+        padding: 15px 30px 15px 15px;
+        transition: background-color 0.2s ease-in-out !important;
+    }
+
+    header nav i {
+        visibility: visible;
+    }
+
+    header nav i:hover ~ ul {
+        display: flex;
+    }
+
+    header nav ul:hover  {
+        display: flex;
+    }
+
+    header nav ul li:hover{
+        background-color: #c5c5ff;
+        padding: 15px 30px 15px 15px;
+    }
+
+    main > section > article > p {
+        padding: 0 10px;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #B3B2B7;
+        text-align: center;
+    }
+
+    section.welcome > article img {
+        height: 140px;
+    }
+
+    section.welcome button {
+        align-self: center;
+    }
+
+    main section.identity{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    main section.identity > article:nth-of-type(1){
+        padding: 5px 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section.identity > article:nth-of-type(1) > h3{
+        text-align: center;
+    }
+
+    section.identity > article > ol{
+        margin: 50px 0 10px 0;
+    }
+
+    section.identity > article > ol > li {
+        padding: 20px 0;
+        line-height: 1.8rem;
+    }
+
+    section.identity > article > ol > li > h4 {
+        position: relative;
+        font-size: 1.2rem;
+    }
+
+    main article ol h4::after{
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: -50%;
+        content: '';
+        height: 100%;
+        width: 200%;
+
+        background-color: #fff0eb;
+    }
+
+
+    section.identity > article > ol > li::before {
+        transform: translateX(-100%) translateY(5%);
+    }
+
+    section.banner {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    section.banner h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr 4fr 2fr 4fr 1fr;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    footer svg {
+        grid-row: 4 / 5;
+        grid-column: 1 / 3;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    footer div {
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        justify-content: center;
+        gap: 30px;
+        font-size: 1.8rem;
+    }
+
+    footer ul {
+        padding-left: 25%;
+    }
+
+    footer ul:nth-of-type(1) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    
+    footer ul:nth-of-type(2) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+    
+    footer form {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    footer p{
+        grid-row: 5 / 6;
+        grid-column: 1 / 3;
+
+        align-self: center;
+        justify-self: center;
+    }
+}
